@@ -1,0 +1,56 @@
+{
+  "unitOfMeasurements": [
+    {
+      "name": "Piece",
+      "symbol": "pc"
+    },
+    {
+      "name": "Kilogram",
+      "symbol": "kg"
+    },
+    {
+      "name": "Gram",
+      "symbol": "g"
+    },
+    {
+      "name": "Liter",
+      "symbol": "L"
+    },
+    {
+      "name": "Milliliter",
+      "symbol": "ml"
+    },
+    {
+      "name": "Meter",
+      "symbol": "m"
+    },
+    {
+      "name": "Centimeter",
+      "symbol": "cm"
+    },
+    {
+      "name": "Square Meter",
+      "symbol": "m²"
+    },
+    {
+      "name": "Cubic Meter",
+      "m³": "m³"
+    },
+    {
+      "name": "Dozen",
+      "symbol": "dz"
+    },
+    {
+      "name": "Box",
+      "symbol": "box"
+    },
+    {
+      "name": "Pack",
+      "symbol": "pk"
+    },
+    {
+      "name": "Set",
+      "symbol": "set"
+    }
+  ]
+}

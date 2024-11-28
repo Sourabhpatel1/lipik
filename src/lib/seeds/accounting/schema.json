@@ -1,0 +1,538 @@
+{
+  "rootAccounts": [
+    {
+      "id": 100000,
+      "name": "Assets"
+    },
+    {
+      "id": 200000,
+      "name": "Liabilities"
+    },
+    {
+      "id": 300000,
+      "name": "Equity"
+    },
+    {
+      "id": 400000,
+      "name": "Income"
+    },
+    {
+      "id": 500000,
+      "name": "Expenses"
+    }
+  ],
+  "groupAccounts": [
+    {
+      "id": 101000,
+      "rootId": 100000,
+      "name": "Cash & Cash Equivalents"
+    },
+    {
+      "id": 102000,
+      "rootId": 100000,
+      "name": "Bank Accounts"
+    },
+    {
+      "id": 103000,
+      "rootId": 100000,
+      "name": "Current Assets"
+    },
+    {
+      "id": 103100,
+      "rootId": 100000,
+      "name": "Inventory"
+    },
+    {
+      "id": 104000,
+      "rootId": 100000,
+      "name": "Fixed Assets"
+    },
+    {
+      "id": 105000,
+      "rootId": 100000,
+      "name": "Accumulated Depreciation"
+    },
+    {
+      "id": 106000,
+      "rootId": 100000,
+      "name": "Intangible Assets"
+    },
+    {
+      "id": 107000,
+      "rootId": 100000,
+      "name": "Accumulated Amortization"
+    },
+    {
+      "id": 108000,
+      "rootId": 100000,
+      "name": "Investments"
+    },
+    {
+      "id": 109000,
+      "rootId": 100000,
+      "name": "Other Assets"
+    },
+    {
+      "id": 110000,
+      "rootId": 100000,
+      "name": "Trade Receivables"
+    },
+    {
+      "id": 111100,
+      "rootId": 100000,
+      "name": "GST (Assets)"
+    },
+    {
+      "id": 111200,
+      "rootId": 100000,
+      "name": "Sales Tax (Assets)"
+    },
+    {
+      "id": 111300,
+      "rootId": 100000,
+      "name": "VAT (Assets)"
+    },
+    {
+      "id": 111400,
+      "rootId": 100000,
+      "name": "Other Tax Assets"
+    },
+    {
+      "id": 201000,
+      "rootId": 200000,
+      "name": "Trade Payables"
+    },
+    {
+      "id": 202000,
+      "rootId": 200000,
+      "name": "Current Liabilities"
+    },
+    {
+      "id": 203000,
+      "rootId": 200000,
+      "name": "Long Term Liabilities"
+    },
+    {
+      "id": 204000,
+      "rootId": 200000,
+      "name": "Provisions"
+    },
+    {
+      "id": 205100,
+      "rootId": 200000,
+      "name": "GST (Liabilities)"
+    },
+    {
+      "id": 205200,
+      "rootId": 200000,
+      "name": "Sales Tax (Liabilities)"
+    },
+    {
+      "id": 205300,
+      "rootId": 200000,
+      "name": "VAT (Liabilities)"
+    },
+    {
+      "id": 205400,
+      "rootId": 200000,
+      "name": "Other Tax Liabilities"
+    },
+    {
+      "id": 301000,
+      "rootId": 300000,
+      "name": "Capital Accounts"
+    },
+    {
+      "id": 302000,
+      "rootId": 300000,
+      "name": "Reserves & Surplus"
+    },
+    {
+      "id": 401000,
+      "rootId": 400000,
+      "name": "Direct Income"
+    },
+    {
+      "id": 402000,
+      "rootId": 400000,
+      "name": "Indirect Income"
+    },
+    {
+      "id": 403000,
+      "rootId": 400000,
+      "name": "Discounts Received"
+    },
+    {
+      "id": 501000,
+      "rootId": 500000,
+      "name": "Direct Expenses"
+    },
+    {
+      "id": 502000,
+      "rootId": 500000,
+      "name": "Indirect Expenses"
+    },
+    {
+      "id": 503000,
+      "rootId": 500000,
+      "name": "Administrative Expenses"
+    },
+    {
+      "id": 504000,
+      "rootId": 500000,
+      "name": "Discounts & Losses"
+    },
+    {
+      "id": 505000,
+      "rootId": 500000,
+      "name": "Depreciation & Amortization"
+    }
+  ],
+  "accounts": [
+    {
+      "number": 101001,
+      "name": "Cash in Hand",
+      "groupId": 101000
+    },
+    {
+      "number": 102001,
+      "name": "Bank Account",
+      "groupId": 102000
+    },
+    {
+      "number": 110001,
+      "name": "Trade Receivables",
+      "groupId": 110000
+    },
+    {
+      "number": 103101,
+      "name": "Raw Materials",
+      "groupId": 103100
+    },
+    {
+      "number": 103102,
+      "name": "Work in Progress",
+      "groupId": 103100
+    },
+    {
+      "number": 103103,
+      "name": "Finished Goods",
+      "groupId": 103100
+    },
+    {
+      "number": 111101,
+      "name": "GST Input Credit",
+      "groupId": 111100
+    },
+    {
+      "number": 111102,
+      "name": "IGST Input Credit",
+      "groupId": 111100
+    },
+    {
+      "number": 111201,
+      "name": "State Sales Tax Input (Assets)",
+      "groupId": 111200
+    },
+    {
+      "number": 111202,
+      "name": "Central Sales Tax Input (Assets)",
+      "groupId": 111200
+    },
+    {
+      "number": 111301,
+      "name": "VAT Input Credit",
+      "groupId": 111300
+    },
+    {
+      "number": 111401,
+      "name": "TDS Receivable",
+      "groupId": 111400
+    },
+    {
+      "number": 111402,
+      "name": "Advance Tax",
+      "groupId": 111400
+    },
+    {
+      "number": 103007,
+      "name": "Advance to Suppliers",
+      "groupId": 103000
+    },
+    {
+      "number": 103008,
+      "name": "Prepaid Expenses",
+      "groupId": 103000
+    },
+    {
+      "number": 104001,
+      "name": "Land",
+      "groupId": 104000
+    },
+    {
+      "number": 104002,
+      "name": "Buildings",
+      "groupId": 104000
+    },
+    {
+      "number": 104003,
+      "name": "Plant & Machinery",
+      "groupId": 104000
+    },
+    {
+      "number": 104004,
+      "name": "Furniture & Fixtures",
+      "groupId": 104000
+    },
+    {
+      "number": 104005,
+      "name": "Office Equipment",
+      "groupId": 104000
+    },
+    {
+      "number": 104006,
+      "name": "Computers & Software",
+      "groupId": 104000
+    },
+    {
+      "number": 104007,
+      "name": "Motor Vehicles",
+      "groupId": 104000
+    },
+    {
+      "number": 105001,
+      "name": "Accumulated Depreciation",
+      "groupId": 105000
+    },
+    {
+      "number": 106001,
+      "name": "Goodwill",
+      "groupId": 106000
+    },
+    {
+      "number": 106002,
+      "name": "Patents",
+      "groupId": 106000
+    },
+    {
+      "number": 106003,
+      "name": "Trademarks",
+      "groupId": 106000
+    },
+    {
+      "number": 106004,
+      "name": "Licenses & Franchises",
+      "groupId": 106000
+    },
+    {
+      "number": 106005,
+      "name": "Computer Software",
+      "groupId": 106000
+    },
+    {
+      "number": 106006,
+      "name": "Development Costs",
+      "groupId": 106000
+    },
+    {
+      "number": 107001,
+      "name": "Accumulated Amortization",
+      "groupId": 107000
+    },
+    {
+      "number": 201001,
+      "name": "Trade Payables",
+      "groupId": 201000
+    },
+    {
+      "number": 205101,
+      "name": "GST Payable",
+      "groupId": 205100
+    },
+    {
+      "number": 205102,
+      "name": "IGST Payable",
+      "groupId": 205100
+    },
+    {
+      "number": 205201,
+      "name": "State Sales Tax Payable (Liabilities)",
+      "groupId": 205200
+    },
+    {
+      "number": 205202,
+      "name": "Central Sales Tax Payable (Liabilities)",
+      "groupId": 205200
+    },
+    {
+      "number": 205301,
+      "name": "VAT Output Tax Payable",
+      "groupId": 205300
+    },
+    {
+      "number": 205401,
+      "name": "TDS Payable",
+      "groupId": 205400
+    },
+    {
+      "number": 205402,
+      "name": "Professional Tax Payable",
+      "groupId": 205400
+    },
+    {
+      "number": 202005,
+      "name": "Salary Payable",
+      "groupId": 202000
+    },
+    {
+      "number": 202006,
+      "name": "PF Payable",
+      "groupId": 202000
+    },
+    {
+      "number": 202007,
+      "name": "ESI Payable",
+      "groupId": 202000
+    },
+    {
+      "number": 203001,
+      "name": "Bank Loans",
+      "groupId": 203000
+    },
+    {
+      "number": 203002,
+      "name": "Vehicle Loans",
+      "groupId": 203000
+    },
+    {
+      "number": 301001,
+      "name": "Capital Account",
+      "groupId": 301000
+    },
+    {
+      "number": 302001,
+      "name": "Retained Earnings",
+      "groupId": 302000
+    },
+    {
+      "number": 401001,
+      "name": "Sales",
+      "groupId": 401000
+    },
+    {
+      "number": 401002,
+      "name": "Service Income",
+      "groupId": 401000
+    },
+    {
+      "number": 402001,
+      "name": "Interest Income",
+      "groupId": 402000
+    },
+    {
+      "number": 402002,
+      "name": "Rental Income",
+      "groupId": 402000
+    },
+    {
+      "number": 402003,
+      "name": "Other Income",
+      "groupId": 402000
+    },
+    {
+      "number": 403001,
+      "name": "Discount Received",
+      "groupId": 403000
+    },
+    {
+      "number": 501001,
+      "name": "Cost of Goods Sold",
+      "groupId": 501000
+    },
+    {
+      "number": 501002,
+      "name": "Direct Labour",
+      "groupId": 501000
+    },
+    {
+      "number": 501003,
+      "name": "Freight Inward",
+      "groupId": 501000
+    },
+    {
+      "number": 502001,
+      "name": "Salary & Wages",
+      "groupId": 502000
+    },
+    {
+      "number": 502002,
+      "name": "Electricity Expenses",
+      "groupId": 502000
+    },
+    {
+      "number": 502003,
+      "name": "Rent",
+      "groupId": 502000
+    },
+    {
+      "number": 502004,
+      "name": "Insurance",
+      "groupId": 502000
+    },
+    {
+      "number": 502005,
+      "name": "Repairs & Maintenance",
+      "groupId": 502000
+    },
+    {
+      "number": 503001,
+      "name": "Office Expenses",
+      "groupId": 503000
+    },
+    {
+      "number": 503002,
+      "name": "Legal & Professional Fees",
+      "groupId": 503000
+    },
+    {
+      "number": 503003,
+      "name": "Bank Charges",
+      "groupId": 503000
+    },
+    {
+      "number": 503004,
+      "name": "Telephone & Internet",
+      "groupId": 503000
+    },
+    {
+      "number": 503005,
+      "name": "Travelling & Conveyance",
+      "groupId": 503000
+    },
+    {
+      "number": 504001,
+      "name": "Discount Allowed",
+      "groupId": 504000
+    },
+    {
+      "number": 504002,
+      "name": "Sales Return",
+      "groupId": 504000
+    },
+    {
+      "number": 504003,
+      "name": "Loss on Sale of Assets",
+      "groupId": 504000
+    },
+    {
+      "number": 505001,
+      "name": "Depreciation",
+      "groupId": 505000
+    },
+    {
+      "number": 505002,
+      "name": "Amortization",
+      "groupId": 505000
+    }
+  ]
+}

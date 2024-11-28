@@ -1,0 +1,368 @@
+@font-face {
+	font-family: 'montserrat';
+	src: url(/Montserrat-VariableFont_wght.ttf);
+}
+
+:root {
+	--fs-sm: 11px;
+	--fs-base: 13px;
+	--fs-lg: 15px;
+	--fs-xl: 18px;
+	--fs-xxl: 20px;
+
+	/* font weight */
+	--fw-light: 300;
+	--fw-base: 400;
+	--fw-dark: 500;
+	--fw-semibold: 600;
+	--fw-bold: 800;
+
+	--color-bg: #ffffff;
+	--color-text: #262626ff;
+	--color-red: #d53734ff;
+	--color-orange: #ff7f11ff;
+	--color-green: #91a117;
+
+	--radius-sm: 4px;
+	--radius-md: 6px;
+	--radius-lg: 8px;
+
+	--shadow-sm: 0px 3px 8px rgba(0, 0, 0, 0.24);
+	--shadow-md: 0px 9px 20px rgba(13, 38, 76, 0.19);
+	--shadow-lg: 0px 12px 28px 0px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+	font-family: 'montserrat';
+	font-size: var(--fs-base);
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 4rem;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+.lucide-icon {
+	flex-shrink: 0;
+}
+
+input {
+	min-height: 30px;
+	padding: 0.5rem 0.75rem;
+	border: 1px solid lightgray;
+	border-radius: var(--radius-md);
+	outline: none;
+	box-shadow: none;
+
+	&:focus-visible {
+		border-color: currentColor;
+	}
+}
+
+button.btn {
+	all: unset;
+	padding: 0.5rem 0.75rem;
+	width: fit-content;
+	color: var(--color-bg);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background: var(--color-text);
+	box-shadow: var(--shadow-sm);
+	border-radius: var(--radius-md);
+	cursor: pointer;
+	box-shadow: var(--shadow-sm);
+	transition: all 0.3s ease;
+	user-select: none;
+
+	&:hover,
+	&:focus-visible {
+		background: var(--color-bg);
+		color: var(--color-text);
+	}
+
+	&:active {
+		transform: scale(0.95);
+	}
+}
+
+.combobox {
+	width: auto !important;
+	color: currentColor;
+
+	& .options {
+		background: var(--color-bg);
+		color: var(--color-text);
+
+		& .option {
+			background: inherit;
+			color: inherit;
+		}
+	}
+}
+
+.container {
+	flex-grow: 1;
+	padding: 0rem 1rem;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	& .scrollarea {
+		flex-grow: 1;
+		overflow-y: auto;
+	}
+}
+
+.simple-form {
+	width: 475px;
+	font-size: var(--fs-base);
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	overflow-y: auto;
+
+	.field {
+		min-height: 95px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.footer {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		& > button {
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+fieldset.filters {
+	padding: 0.5rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	border-radius: var(--radius-md);
+
+	& legend {
+		font-size: var(--fs-lg);
+	}
+
+	& .filter {
+		min-width: 175px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		align-items: center;
+
+		& input {
+			width: 100%;
+		}
+	}
+}
+
+.row-container {
+	width: 65vw;
+	margin-block: 0.5rem;
+	padding: 1rem 0.5rem;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	border: 1px solid currentColor;
+	border-radius: var(--radius-md);
+	overflow: hidden;
+
+	& .header {
+		font-weight: var(--fw-dark);
+		border-block-end: 1px solid;
+	}
+	& .rows {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		gap: 0.25rem;
+		overflow-y: auto;
+
+		& .row {
+			border-radius: var(--radius-md);
+			cursor: pointer;
+			transition: all 0.3s ease;
+
+			&:hover,
+			&:focus-within {
+				box-shadow: var(--shadow-sm);
+			}
+
+			& .actions {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.5rem;
+			}
+		}
+	}
+	& .header,
+	& .row {
+		padding: 0.5rem 0.5rem;
+		display: grid;
+		align-items: center;
+		justify-content: start;
+		gap: 1rem;
+
+		& span:last-child {
+			text-align: center;
+		}
+	}
+}
+
+.error,
+input[data-fs-error] {
+	--border-color: var(--color-red);
+	border-color: var(--color-red);
+	border-radius: var(--radius-md);
+}
+[data-fs-field-error] {
+	font-size: var(--fs-sm);
+	color: var(--color-red);
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important; /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important; /* 3 */
+}
+
+/*
+	Use in conjunction with .sr-only to only display content when it's focused.
+	@note Useful for skip links 
+	@see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+	@note Based on a HTML5 Boilerplate technique, included in Bootstrap
+	@note Fixed a bug with position: static on iOS 10.0.2 + VoiceOver
+		@author Sylvain Pigeard
+		@see https://github.com/twbs/bootstrap/issues/20732
+*/
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+	clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+
+@media print {
+	body {
+		visibility: hidden;
+	}
+	#printable {
+		visibility: visible;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		border: none;
+		overflow-y: auto;
+	}
+}
