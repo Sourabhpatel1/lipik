@@ -245,8 +245,7 @@
 
 <style>
 	.wrapper {
-		width: 100%;
-		min-width: fit-content;
+		min-width: 100%;
 		flex-shrink: 0;
 		position: relative;
 
@@ -259,6 +258,7 @@
 		}
 
 		& .searchbox {
+			width: 100%;
 			padding: 0.125rem 0.25rem;
 			display: flex;
 			align-items: center;

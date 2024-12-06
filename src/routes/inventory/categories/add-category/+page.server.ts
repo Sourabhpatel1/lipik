@@ -1,12 +1,12 @@
 import { fail, message, superValidate } from 'sveltekit-superforms';
 import type { PageServerLoad } from './$types';
 import { zod } from 'sveltekit-superforms/adapters';
-import { newCatrgorySchema } from '$lib/zod/inventory';
+import { newCategorySchema } from '$lib/zod/inventory';
 import type { Actions } from '@sveltejs/kit';
 import { createCategory } from '$lib/dbUtils/inventory/script';
 
 export const load: PageServerLoad = async () => {
-	const form = await superValidate(zod(newCatrgorySchema));
+	const form = await superValidate(zod(newCategorySchema));
 	return {
 		form
 	};
@@ -14,7 +14,7 @@ export const load: PageServerLoad = async () => {
 
 export const actions: Actions = {
 	default: async ({ locals, request }) => {
-		const form = await superValidate(request, zod(newCatrgorySchema));
+		const form = await superValidate(request, zod(newCategorySchema));
 		if (!form.valid) {
 			return fail(400, { form });
 		}

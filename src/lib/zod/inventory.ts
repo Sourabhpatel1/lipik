@@ -11,7 +11,7 @@ export const newUOMSchema = z.object({
     .max(16, { message: 'Symbol can not be longer than 16 characters' })
 });
 
-export const newCatergorySchema = z.object({
+export const newCategorySchema = z.object({
   name: z
     .string()
     .min(1, { message: 'Name is required.' })

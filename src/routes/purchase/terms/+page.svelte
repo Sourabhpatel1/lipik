@@ -3,21 +3,21 @@
 	import BackButton from '$lib/components/BackButton.svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import { PlusCircle } from 'lucide-svelte';
-
-	let { data } = $props();
-	console.log(data);
 </script>
 
 <div class="container">
-	<PageHeader title="Purchase Orders" description="View and Manage Purchase Orders">
+	<PageHeader
+		title="Purchase Terms And Conditions"
+		description="View and manage terms and conditions for purchase orders and purchase invoices"
+	>
 		<button
 			class="btn"
 			onclick={() => {
-				goto('/purchase/orders/add-order');
+				goto('/purchase/terms/add-terms');
 			}}
 		>
 			<PlusCircle size={16} />
-			Add New Order
+			Add New Terms
 		</button>
 		<BackButton />
 	</PageHeader>

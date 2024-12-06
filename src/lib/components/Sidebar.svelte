@@ -82,9 +82,6 @@
 				<div class="submenu-wrapper">
 					<ul class="submenu">
 						<li class="submenu-heading">Accounting</li>
-						<li class="submenu-item" class:active={$page.route.id === '/accounting'}>
-							<a href="/accounting">Home</a>
-						</li>
 						<li
 							class="submenu-item"
 							class:active={$page.route.id?.includes('/accounting/chart-of-accounts')}
@@ -135,8 +132,8 @@
 				<div class="submenu-wrapper">
 					<ul class="submenu">
 						<li class="submenu-heading">Taxes</li>
-						<li class="submenu-item" class:active={$page.route.id === '/taxes'}>
-							<a href="/taxes">Home</a>
+						<li class="submenu-item" class:active={$page.route.id?.includes('/taxes')}>
+							<a href="/taxes">View Taxes</a>
 						</li>
 						<li class="submenu-item" class:active={$page.route.id?.includes('/taxes/add-tax')}>
 							<a href="/taxes/add-tax">Add New Tax</a>
@@ -161,9 +158,6 @@
 				<div class="submenu-wrapper">
 					<ul class="submenu">
 						<li class="submenu-heading">Parties</li>
-						<li class="submenu-item" class:active={$page.route.id === '/parties'}>
-							<a href="/parties">Home</a>
-						</li>
 						<li class="submenu-item" class:active={$page.route.id?.includes('/parties/customers')}>
 							<a href="/parties/customers">Customers</a>
 						</li>
@@ -173,7 +167,6 @@
 					</ul>
 				</div>
 			</li>
-
 			<li
 				class="menu-item"
 				class:active={$page.route.id?.includes('/purchase')}
@@ -191,19 +184,18 @@
 				<div class="submenu-wrapper">
 					<ul class="submenu">
 						<li class="submenu-heading">Purchase</li>
-						<li class="submenu-item" class:active={$page.route.id === '/purchase'}>
-							<a href="/purchase">Home</a>
-						</li>
 						<li class="submenu-item" class:active={$page.route.id?.includes('/purchase/orders')}>
 							<a href="/purchase/orders">Purchase Orders</a>
 						</li>
 						<li class="submenu-item" class:active={$page.route.id?.includes('/purchase/invoices')}>
 							<a href="/purchase/invoices">Purchase Invoices</a>
 						</li>
+						<li class="submenu-item" class:active={$page.route.id?.includes('/purchase/terms')}>
+							<a href="/purchase/terms">Purchase Terms</a>
+						</li>
 					</ul>
 				</div>
 			</li>
-
 			<li
 				class="menu-item"
 				class:active={$page.route.id?.includes('/sales')}
@@ -221,25 +213,18 @@
 				<div class="submenu-wrapper">
 					<ul class="submenu">
 						<li class="submenu-heading">Sales</li>
-						<li class="submenu-item" class:active={$page.route.id === '/sales'}>
-							<a href="/">Home</a>
-						</li>
 						<li class="submenu-item" class:active={$page.route.id?.includes('/sales/orders')}>
 							<a href="/">Sales Orders</a>
 						</li>
 						<li class="submenu-item" class:active={$page.route.id?.includes('/sales/invoices')}>
 							<a href="/">Sales Invoices</a>
 						</li>
-						<li class="submenu-item" class:active={$page.route.id?.includes('/sales/new-order')}>
-							<a href="/">New Sales Order</a>
-						</li>
-						<li class="submenu-item" class:active={$page.route.id?.includes('/sales/new-invoice')}>
-							<a href="/">New Sales Invoice</a>
+						<li class="submenu-item" class:active={$page.route.id?.includes('/sales/terms')}>
+							<a href="/">Sales Terms</a>
 						</li>
 					</ul>
 				</div>
 			</li>
-
 			<li
 				class="menu-item"
 				class:active={$page.route.id?.includes('/inventory')}
@@ -257,9 +242,6 @@
 				<div class="submenu-wrapper">
 					<ul class="submenu">
 						<li class="submenu-heading">Inventory</li>
-						<li class="submenu-item" class:active={$page.route.id === '/inventory'}>
-							<a href="/inventory">Home</a>
-						</li>
 						<li
 							class="submenu-item"
 							class:active={$page.route.id?.includes('/inventory/categories')}
@@ -281,7 +263,6 @@
 					</ul>
 				</div>
 			</li>
-
 			<li
 				class="menu-item"
 				class:active={$page.route.id?.includes('/hr')}
@@ -299,9 +280,6 @@
 				<div class="submenu-wrapper">
 					<ul class="submenu">
 						<li class="submenu-heading">Human Resources</li>
-						<li class="submenu-item" class:active={$page.route.id === '/hr'}>
-							<a href="/">Home</a>
-						</li>
 						<li class="submenu-item" class:active={$page.route.id?.includes('/hr/departments')}>
 							<a href="/">Departments</a>
 						</li>
@@ -334,9 +312,6 @@
 				<div class="submenu-wrapper">
 					<ul class="submenu">
 						<li class="submenu-heading">Reports</li>
-						<li class="submenu-item" class:active={$page.route.id === '/reports'}>
-							<a href="/">Home</a>
-						</li>
 						<li
 							class="submenu-item"
 							class:active={$page.route.id?.includes('/reports/profit-loss')}
@@ -381,7 +356,7 @@
 	nav {
 		position: relative;
 		height: 100%;
-		width: 260px;
+		width: 248px;
 		padding: 1.5rem 0.25rem;
 		display: flex;
 		flex-direction: column;

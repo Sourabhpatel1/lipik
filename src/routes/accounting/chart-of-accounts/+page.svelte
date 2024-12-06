@@ -76,49 +76,57 @@
 	</PageHeader>
 	<fieldset class="filters">
 		<legend>Filter Chart of Accounts</legend>
-		<input
-			type="text"
-			placeholder="Account Name"
-			bind:value={nameFilter}
-			onkeyup={() => {
-				filterAccounts();
-			}}
-		/>
-		<input
-			type="text"
-			placeholder="Account Number"
-			bind:value={numberFilter}
-			onkeyup={() => {
-				filterAccounts();
-			}}
-		/>
-		<SelectBox
-			options={rootAccounts.map((r) => ({ label: r, value: r }))}
-			placeholder="Root Account"
-			bind:value={rootFilter}
-			onSelect={() => {
-				filterAccounts();
-			}}
-			onClear={() => {
-				rootFilter = undefined;
-				typeFilter = undefined;
-				filterAccounts();
-			}}
-		/>
-		<SelectBox
-			--options-max-height={'350px'}
-			options={groupAccounts.map((r) => ({ label: r, value: r }))}
-			placeholder="Account Type"
-			bind:value={typeFilter}
-			emptyMessage="Select a root account first"
-			onSelect={() => {
-				filterAccounts();
-			}}
-			onClear={() => {
-				typeFilter = undefined;
-				filterAccounts();
-			}}
-		/>
+		<div class="filter">
+			<input
+				type="text"
+				placeholder="Account Name"
+				bind:value={nameFilter}
+				onkeyup={() => {
+					filterAccounts();
+				}}
+			/>
+		</div>
+		<div class="filter">
+			<input
+				type="text"
+				placeholder="Account Number"
+				bind:value={numberFilter}
+				onkeyup={() => {
+					filterAccounts();
+				}}
+			/>
+		</div>
+		<div class="filter">
+			<SelectBox
+				options={rootAccounts.map((r) => ({ label: r, value: r }))}
+				placeholder="Root Account"
+				bind:value={rootFilter}
+				onSelect={() => {
+					filterAccounts();
+				}}
+				onClear={() => {
+					rootFilter = undefined;
+					typeFilter = undefined;
+					filterAccounts();
+				}}
+			/>
+		</div>
+		<div class="filter">
+			<SelectBox
+				--options-max-height={'350px'}
+				options={groupAccounts.map((r) => ({ label: r, value: r }))}
+				placeholder="Account Type"
+				bind:value={typeFilter}
+				emptyMessage="Select a root account first"
+				onSelect={() => {
+					filterAccounts();
+				}}
+				onClear={() => {
+					typeFilter = undefined;
+					filterAccounts();
+				}}
+			/>
+		</div>
 	</fieldset>
 	<div class="row-container">
 		<div class="header">

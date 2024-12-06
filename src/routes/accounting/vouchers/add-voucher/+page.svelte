@@ -76,13 +76,9 @@
 			description="Create new accounting voucher by filling out the form below and
     click on submit"
 		>
-			<button class="btn">
-				<PlusCircle size={16} />
-				New Voucher
-			</button>
 			<BackButton />
 		</PageHeader>
-		<form method="POST" use:enhance>
+		<form method="POST" class="dynamic-form" use:enhance>
 			<div class="information">
 				<div class="field">
 					<Field {form} name="voucherDate">
@@ -211,80 +207,11 @@
 {/if}
 
 <style>
-	form {
-		width: 50vw;
-		padding: 1rem;
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		overflow: hidden;
+	.dynamic-form {
+		width: 60vw;
 
-		& .information {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 1rem;
-
-			& .field {
-				display: flex;
-				flex-direction: column;
-				gap: 0.5rem;
-			}
-		}
-
-		& :global(fieldset) {
-			flex-grow: 1;
-			display: flex;
-			padding: 1rem 0.5rem;
-			border-radius: var(--radius-md);
-			overflow-y: hidden;
-		}
-
-		& .rows {
-			flex-grow: 1;
-			overflow: auto;
-			display: flex;
-			flex-direction: column;
-			gap: 0.5rem;
-
-			& .row {
-				display: grid;
-				grid-template-columns: 40px 1.25fr 3fr 2fr 40px;
-				gap: 0.5rem;
-
-				& * {
-					width: 100%;
-				}
-
-				& .row-num {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					border-radius: var(--radius-md);
-					box-shadow: var(--shadow-sm);
-				}
-
-				& :global(.btn) {
-					max-height: 25px !important;
-					padding: 0.25rem 0.5rem !important;
-				}
-			}
-		}
-
-		& .footer {
-			margin-top: 1rem;
-			width: 40%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 1rem;
-
-			& .btn {
-				padding: 0.375rem 0.5rem;
-				height: 20px;
-				width: 100%;
-				flex-grow: 1;
-			}
+		.row {
+			grid-template-columns: 40px 1.25fr 3fr 2fr 40px;
 		}
 	}
 </style>
